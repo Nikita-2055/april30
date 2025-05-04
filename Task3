@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+    float *arr = (float *)calloc(4,sizeof(float));
+    printf("input number:\n");
+    for(int i = 0; i < 4; ++i){
+        scanf("%f",&arr[i]);
+    }
+    for(int i = 0; i < 4; ++i){
+        printf("%.2f ",arr[i]);
+    }
+    free(arr);
+    return 0;    
+}
