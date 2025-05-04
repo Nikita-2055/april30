@@ -1,0 +1,28 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+    int size = 0;
+    printf("input size:");
+    scanf("%d",&size);
+    int *arr = (int *)malloc(size*sizeof(int));
+    printf("input number:");
+    for(int i = 0; i < size; ++i){
+        scanf("%d",&arr[i]);
+    }
+    printf("reallocic araj: ");
+    for(int i = 0; i < size; ++i){
+        printf("%d ",arr[i]);
+    }
+    printf("\n");
+    arr = (int *)realloc(arr,(size + 1) * sizeof(int));
+    scanf("%d",&arr[3]);
+    printf("reallocic heto: ");
+    for(int i = 0; i < 4; ++i){
+        printf("%d",arr[i]);
+    }
+    printf("\n");
+    free(arr);
+    return 0;
+
+}
